@@ -1,0 +1,34 @@
+header{
+    width: 1000px;
+    height: 65px;
+    position: relative;
+
+    .header__menu{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    img{
+        margin: 15px 30px;
+    }
+    span{
+        width: 100%;
+    }
+    .line1{
+        width: 100%;
+        height: 1px;
+        background-color: #73BE43;
+    }
+    .line2{
+        width: 50%;
+        height: 1px;
+        background-color: red;
+    }
+    .line3{
+        background-color: red;
+        width: 386px;
+        height: 5px;
+    }
+
+}
