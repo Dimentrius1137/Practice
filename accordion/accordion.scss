@@ -24,11 +24,12 @@ body{
 
 .outer__cont{
     width: 1000px;
-    height: 744px;
+    min-height: 744px;
+    height: auto;
 }
 
 main{
-    height: 500px;
+    height: auto;
     @include flex__params(center, center, column);
     h1{
         width: 100%;
@@ -37,7 +38,7 @@ main{
 
     .acc__cont{
         width: 950px;
-        height: 408px;
+        height: auto;
         .acc__tab{
             transition: all 0.1s;
             height: auto;

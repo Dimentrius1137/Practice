@@ -1,17 +1,27 @@
-const accord_tabs = document.querySelector('.acc__cont');
+const accords = document.querySelectorAll('.acc__cont');
 const enterButton = document.querySelector('button');
 
+accords.forEach(accord => {
 
-accord_tabs.addEventListener('click', (el) => {
+    accord.addEventListener('click', OpenTab)
+})
+
+
+ function OpenTab(el) {
 
     const tab_content = el.target.parentElement.children[1];
     const arrow = el.target.parentElement.children[0].children[0];
     const tab = el.target.parentElement;
+
+    const accords_container = el.target.parentElement.parentElement.parentElement;
     if(el.target.classList.contains('tab__title'))
         {
-            el.target.classList.add('checked')
+            el.target.classList.remove('no__checked');
             if(!tab_content.classList.contains('open')){
-                CloseTabs();
+
+                
+                CloseTabs(accords_container);
+
                 tab_content.classList.add('open');
                 arrow.classList.add('rotate');
                 tab.classList.add('acc__tab__border');
@@ -23,39 +33,33 @@ accord_tabs.addEventListener('click', (el) => {
                 tab.classList.remove('acc__tab__border');
             }
         }
-
-        CheckedTabs()
-
-})
-
-
-function CloseTabs(){
-
-    [...accord_tabs.children].forEach((el) => {
-        el.children[1].classList.remove('open');
-        el.children[0].children[0].classList.remove('rotate');
-        el.classList.remove('acc__tab__border');
-    })
+        IsElementsChecked()
+       
 
 }
 
-function CheckedTabs(){
-    let open_tabs_counter = 0;
 
-    [...accord_tabs.children].forEach((el) => {
+function CloseTabs(accord){
+    const tabs = accord.querySelectorAll('.acc__tab')
 
-        if(el.children[0].classList.contains('checked')){
-            open_tabs_counter += 1;
+    console.log(tabs)
+    tabs.forEach((el) => {
+            el.children[1].classList.remove('open');
+            el.children[0].children[0].classList.remove('rotate');
+            el.classList.remove('acc__tab__border');
+        })
+
+}
+
+function IsElementsChecked(){
+    const unchecked_elements = document.querySelectorAll('.no__checked')
+    if(unchecked_elements.length > 0)
+        {
+            return false;
         }
-        else{
-            return false
-        }
 
-    })
-    // [...accord_tabs.children].filter(el => { el.children[0].classList.contains('checked') ? console.log(open_tabs_counter) : false })
-
-    if(open_tabs_counter >= 3){
-        enterButton.disabled = false
+    else{
+        enterButton.disabled = false;
     }
 
 }

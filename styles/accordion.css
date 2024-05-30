@@ -68,11 +68,12 @@ body {
 
 .outer__cont {
   width: 1000px;
-  height: 744px;
+  min-height: 744px;
+  height: auto;
 }
 
 main {
-  height: 500px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +85,7 @@ main h1 {
 }
 main .acc__cont {
   width: 950px;
-  height: 408px;
+  height: auto;
 }
 main .acc__cont .acc__tab {
   transition: all 0.1s;
