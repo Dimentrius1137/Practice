@@ -1,26 +1,33 @@
-const tabs = document.querySelectorAll('.tab__content');
-const switches = document.querySelectorAll('.tab__switch__cont');
+const tabs_container = document.querySelectorAll('.main__container');
 
-switches.forEach(switchEl => switchEl.addEventListener('click', (switch_el) => {
-    if(switch_el.target.classList.contains('tab__switch'))
+tabs_container.forEach((el) => {
+    el.addEventListener('click', (container) => {
+       if(container.target.classList.contains('tab__switch'))
         {
-        [...switchEl.children].forEach((el) => { el.classList.remove('select') })
-        switch_el.target.classList.add('select');
-        tabs[0].classList.remove('no__checked');
-        tabs.forEach((tab) => {
-            tab.style.display = "none";
-            if(switch_el.target.id == tab.id){
-                tab.style.display = "flex";
-                tab.classList.remove('no__checked');
-            }
-        })
-    }
-    // Complete()
-    IsElementsChecked()
-}));
+           let switch__elements = el.children[0].children;
+           [...switch__elements].forEach(switch__el => switch__el.classList.remove('select') )
+           container.target.classList.add('select');
+
+           let tabs = el.children[1].children
+           tabs[0].classList.remove('no__checked');
+            
+           let tab__switch = container.target;
+           [...tabs].forEach((tab) => {
+                tab.style.display = "none";
+                if(tab__switch.id == tab.id){
+                    tab.style.display = "flex";
+                    tab.classList.remove('no__checked');
+                }
+            })
+        }
+        IsElementsChecked()
+    })
+})
 
 
 const enterButton = document.querySelector('button');
+
+
 
 function IsElementsChecked(){
     const unchecked_elements = document.querySelectorAll('.no__checked')
