@@ -8,7 +8,7 @@
     font-size: 14px;
 }   
 
-@mixin column_centred($horiz, $vert, $dir){
+@mixin flex__params($horiz, $vert, $dir){
     display: flex;
     flex-direction: $dir;
     align-items: $horiz;

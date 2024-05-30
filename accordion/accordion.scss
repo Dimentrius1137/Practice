@@ -9,7 +9,7 @@
     font-size: 14px;
 }   
 
-@mixin column_centred($horiz, $vert, $dir){
+@mixin flex__params($horiz, $vert, $dir){
     display: flex;
     flex-direction: $dir;
     align-items: $horiz;
@@ -19,7 +19,7 @@
 body{
     width: 100%;
     height: 100vh;
-    @include column_centred(center, start, column);
+    @include flex__params(center, start, column);
 }
 
 .outer__cont{
@@ -29,7 +29,7 @@ body{
 
 main{
     height: 500px;
-    @include column_centred(center, center, column);
+    @include flex__params(center, center, column);
     h1{
         width: 100%;
         padding: 30px;
@@ -43,14 +43,14 @@ main{
             height: auto;
             min-height: 65px;
             border-bottom: 1px solid red;
-            @include column_centred(start, space-between, column);
+            @include flex__params(start, space-between, column);
 
             .tab__title{
                 width: 100%;
                 height: 65px;
                 padding-left: 30px;
                 font-weight: 500;
-                @include column_centred(center, space-between, row);
+                @include flex__params(center, space-between, row);
                 .arrow{
                     transition: all 0.5s;
                     transform: rotate(180deg);
