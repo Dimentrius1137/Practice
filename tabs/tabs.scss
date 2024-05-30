@@ -1,5 +1,5 @@
-@import 'header';
-@import 'footer';
+@import '../scss_patterns/header';
+@import '../scss_patterns/footer';
 *{
     padding: 0;
     margin: 0;
@@ -15,12 +15,14 @@
     justify-content: $vert;
 }
 
-html{
-    width: 100%;
-    height: 100%;
-    @include column_centred(center, center);
-}
+
 body{
+    width: 100%;
+    height: 100vh;
+    @include column_centred(center, start);
+}
+
+.outer__cont{
     width: 1000px;
     height: 744px;
 }
@@ -38,7 +40,7 @@ main{
         margin-top: 30px;
 
     }
-    .container{
+    .main__container{
         width: 100%;
         margin-top: 34px;
         display: flex;
@@ -124,6 +126,5 @@ main{
                 background-color: #1C1A1A26;
             }
         }
-    
 
 

@@ -1,5 +1,5 @@
 header {
-  width: 1000px;
+  width: 100%;
   height: 65px;
   position: relative;
 }
@@ -33,7 +33,7 @@ header .line3 {
 
 footer {
   width: 100%;
-  height: 10px;
+  height: 5px;
   display: flex;
   flex-direction: row;
 }
@@ -56,16 +56,16 @@ footer .footer__line2 {
   font-size: 14px;
 }
 
-html {
+body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
-body {
+.outer__cont {
   width: 1000px;
   height: 744px;
 }
@@ -83,7 +83,7 @@ main h1 {
   width: 100%;
   margin-top: 30px;
 }
-main .container {
+main .main__container {
   width: 100%;
   margin-top: 34px;
   display: flex;
@@ -91,7 +91,7 @@ main .container {
   justify-content: start;
   gap: 20px;
 }
-main .container .tab__switch__cont {
+main .main__container .tab__switch__cont {
   width: 232px;
   height: 166px;
   display: flex;
@@ -102,18 +102,18 @@ main .container .tab__switch__cont {
   padding: 20px;
   box-shadow: 2px 2px 10px #EEEEEE;
 }
-main .container .tab__switch__cont .tab__switch {
+main .main__container .tab__switch__cont .tab__switch {
   height: auto;
   font-size: 14px;
 }
-main .container .tab__switch__cont .tab__switch:hover {
+main .main__container .tab__switch__cont .tab__switch:hover {
   cursor: pointer;
 }
-main .container .tab__switch__cont .select {
+main .main__container .tab__switch__cont .select {
   color: red;
   font-weight: 700;
 }
-main .container .tab__cont {
+main .main__container .tab__cont {
   width: 698px;
   display: flex;
   flex-direction: column;
@@ -122,31 +122,31 @@ main .container .tab__cont {
   padding: 20px;
   padding-right: 0;
 }
-main .container .tab__cont .tab__content {
+main .main__container .tab__cont .tab__content {
   display: none;
   flex-direction: column;
   gap: 20px;
 }
-main .container .tab__cont .tab__content .tab__el__list {
+main .main__container .tab__cont .tab__content .tab__el__list {
   display: flex;
   flex-direction: column;
   height: auto;
   gap: 10px;
   list-style: none;
 }
-main .container .tab__cont .tab__content .tab__el__list .tab__title {
+main .main__container .tab__cont .tab__content .tab__el__list .tab__title {
   font-weight: 700;
 }
-main .container .tab__cont .tab__content .tab__el__list .tab__title span {
+main .main__container .tab__cont .tab__content .tab__el__list .tab__title span {
   margin-right: 15px;
   color: red;
 }
-main .container .tab__cont .tab__content .tab__el__list .tab__el::before {
+main .main__container .tab__cont .tab__content .tab__el__list .tab__el::before {
   content: "-";
   color: #73BE43;
   margin-right: 15px;
 }
-main .container .tab__content:first-child {
+main .main__container .tab__content:first-child {
   display: flex;
 }
 

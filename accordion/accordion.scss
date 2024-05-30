@@ -1,0 +1,115 @@
+@import '../scss_patterns/header';
+@import '../scss_patterns/footer';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}   
+
+@mixin column_centred($horiz, $vert, $dir){
+    display: flex;
+    flex-direction: $dir;
+    align-items: $horiz;
+    justify-content: $vert;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    @include column_centred(center, start, column);
+}
+
+.outer__cont{
+    width: 1000px;
+    height: 744px;
+}
+
+main{
+    height: 500px;
+    @include column_centred(center, center, column);
+    h1{
+        width: 100%;
+        padding: 30px;
+    }
+
+    .acc__cont{
+        width: 950px;
+        height: 408px;
+        .acc__tab{
+            transition: all 0.1s;
+            height: auto;
+            min-height: 65px;
+            border-bottom: 1px solid red;
+            @include column_centred(start, space-between, column);
+
+            .tab__title{
+                width: 100%;
+                height: 65px;
+                padding-left: 30px;
+                font-weight: 500;
+                @include column_centred(center, space-between, row);
+                .arrow{
+                    transition: all 0.5s;
+                    transform: rotate(180deg);
+                }
+                .rotate{
+                    transform: rotate(360deg);
+                }
+            }
+            .tab__title:hover{
+                cursor: pointer;
+            }
+
+            ul{
+                transition: height 0.4s;
+                height: 1px;
+                overflow: hidden;
+                list-style: none;
+                li{
+                    margin: 10px;
+                    margin-left:15px;
+                    font-weight: 400;
+                }
+                li:before{
+                    content:("–");
+                    margin-right:15px;
+                    color: green;
+        
+                }
+
+            }
+            .open{
+                transition: height 0.4s;
+                height: 150px;
+                
+            }
+        }
+        .acc__tab__border{
+            border-left: 4px solid red;
+            border-top: 1px solid red;
+        }
+    }
+    
+
+}
+
+
+.btn__cont{
+    width: 100%;
+    margin: 25px;
+    text-align: center;
+    button{
+        width: 189px;
+        height: 52px;
+        border-radius: 8px;
+        border: 1px solid #00000033;
+        background-color: #FFFFFF;
+    }
+    button:disabled, button:active{
+        border: 1px solid #00000033;
+        background-color: #1C1A1A26;
+    }
+}
