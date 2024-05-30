@@ -1,43 +1,33 @@
 const tabs = document.querySelectorAll('.tab__content');
-const switches = document.querySelector('.tab__switch__cont');
+const switches = document.querySelectorAll('.tab__switch__cont');
 
-switches.addEventListener('click', (el) => Show(el));
-
-function Show(switch_el){
+switches.forEach(switchEl => switchEl.addEventListener('click', (switch_el) => {
     if(switch_el.target.classList.contains('tab__switch'))
         {
-        [...switches.children].forEach((el) => { el.classList.remove('select') })
+        [...switchEl.children].forEach((el) => { el.classList.remove('select') })
         switch_el.target.classList.add('select');
-        tabs[0].classList.add('check');
+        tabs[0].classList.remove('no__checked');
         tabs.forEach((tab) => {
             tab.style.display = "none";
             if(switch_el.target.id == tab.id){
                 tab.style.display = "flex";
-                tab.classList.add('check');
+                tab.classList.remove('no__checked');
             }
         })
     }
-    Complete()
+    // Complete()
+    IsElementsChecked()
+}));
 
-}
 
+const enterButton = document.querySelector('button');
 
-const enterBtn = document.querySelector('button');
-
-function Complete() {
-
-    let completed = false;
-     tabs.forEach((el) => {
-        completed = false;
-        if(el.classList.contains('check')){
-            completed = true
+function IsElementsChecked(){
+    const unchecked_elements = document.querySelectorAll('.no__checked')
+    if(unchecked_elements.length == 0)
+        {
+          enterButton.disabled = false;
         }
-    }) 
-
-    if(completed){
-       enterBtn.disabled = false
-    }
-    
 }
 
 

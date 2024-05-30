@@ -21,15 +21,16 @@ const swiper = new Swiper('.swiper', {
 
   function CheckSlides(el){
     let slides = "";
-    if(el.target.classList.contains('swiper-button-next') )
+    if(el.target.classList.contains('swiper-button-next') || el.target.classList.contains('swiper-button-prev') )
       {
         slides = el.target.parentElement.parentElement.children[0].children;
       }
-    if(el.target.classList.contains('arrow__icon__next'))
+    if(el.target.classList.contains('arrow__icon__next') || el.target.classList.contains('arrow__icon__prev'))
       {
         slides = el.target.parentElement.parentElement.parentElement.children[0].children;
 
       }
+
       [...slides].forEach((el) => {
         if(el.classList.contains('swiper-slide-active'))
           {
