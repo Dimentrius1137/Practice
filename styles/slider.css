@@ -101,7 +101,7 @@ main .swiper .swiper-slide .slide__content__cont {
   width: 460px;
   height: 204px;
 }
-main .swiper .swiper-slide .slide__content__cont p {
+main .swiper .swiper-slide .slide__content__cont figcaption {
   font-size: 18px;
   font-weight: 700;
 }

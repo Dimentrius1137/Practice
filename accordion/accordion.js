@@ -33,7 +33,6 @@ function CloseTabs(){
 
     [...accord_tabs.children].forEach((el) => {
         el.children[1].classList.remove('open');
-        console.log(el.children[0].children)
         el.children[0].children[0].classList.remove('rotate');
         el.classList.remove('acc__tab__border');
     })
@@ -53,6 +52,7 @@ function CheckedTabs(){
         }
 
     })
+    // [...accord_tabs.children].filter(el => { el.children[0].classList.contains('checked') ? console.log(open_tabs_counter) : false })
 
     if(open_tabs_counter >= 3){
         enterButton.disabled = false
