@@ -4,3 +4,12 @@ import App from './App.vue'
 import './styles.scss'
 
 createApp(App).mount('#app');
+
+const startBtn = document.querySelector('.js__start');
+const startPage = document.querySelector('.js__start__page');
+const quiz = document.getElementById('app');
+
+startBtn.addEventListener('click', () => {
+    startPage.style.display = "none"
+    quiz.style.display = "block"
+});

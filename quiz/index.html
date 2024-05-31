@@ -5,9 +5,53 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
+    <link rel="stylesheet" href="src/styles.scss">
   </head>
   <body>
-    <div id="app"></div>
+    <div class="outer__cont">
+      <header>
+        <div class="header__menu">
+            <img src="../items/1.png" alt="">
+            <span>Текст</span>
+        </div>
+        <div class="line1">
+            <div class="line2">
+                <div class="line3"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+      <h1>
+        Тестирование
+      </h1>
+      <div class="start__page js__start__page">
+        <p class="desc">Осталось пройти небольшой тест,  который покажет, как хорошо ты усвоил материал</p>
+        <div class="points__cont">
+            <ul class="points__list">
+                <li class="point">
+                   <span>&ndash;</span>Для успешного прохождения нужно правильно ответить минимум на 7 вопросов из 10
+                </li>
+                <li class="point">
+                    <span>&ndash;</span>На прохождение теста дается 3 попытки
+                </li>
+            </ul>
+        </div>
+        <div class="start__btn__cont">
+            <button class="start js__start">
+            Начать
+            <img src="../../public/items/next.png" alt="">
+        </button>
+        </div>
+      </div>
+        <div id="app"></div>
+    </main>
+   
+      <footer>
+        <div class="footer__line1"></div>
+        <div class="footer__line2"></div>
+    </footer>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
