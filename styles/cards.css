@@ -58,7 +58,7 @@ footer .footer__line2 {
 
 body {
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,5 +67,135 @@ body {
 
 .outer__cont {
   width: 1000px;
-  height: 766px;
+  height: auto;
+}
+
+main {
+  height: auto;
+}
+main h1 {
+  width: 100%;
+  padding: 30px;
+  font-size: 30px;
+}
+main .cards__cont {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 40px;
+}
+main .cards__cont .card {
+  border: 1px solid #C2C3C6;
+  border-radius: 15px;
+  width: 300px;
+  height: 469px;
+  transition: transform 1s linear;
+}
+main .cards__cont .card .card__front__side {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .cards__cont .card .card__front__side .card__content {
+  text-align: center;
+}
+main .cards__cont .card .card__front__side .card__content .img {
+  width: 243px;
+  height: 204px;
+}
+main .cards__cont .card .card__front__side .card__content figcaption {
+  width: 260px;
+  font-size: 16px;
+  font-weight: 700;
+}
+main .cards__cont .card .card__front__side .card__content figcaption p {
+  text-align: start;
+  margin: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #494949;
+}
+main .cards__cont .card .card__front__side .card__content figcaption p span {
+  font-size: 16px;
+  font-weight: 400;
+  color: red;
+}
+main .cards__cont .card .card__front__side .flip__btn {
+  width: 52px;
+  height: 52px;
+  margin-top: auto;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .cards__cont .card .card__front__side .flip__btn .flip__icon {
+  border-radius: 50%;
+  border: 16px solid transparent;
+}
+main .cards__cont .card__back__side {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+main .cards__cont .card__back__side h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+main .cards__cont .card__back__side .desc {
+  text-align: start;
+  margin: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #494949;
+}
+main .cards__cont .card__back__side .flip__btn {
+  width: 52px;
+  height: 52px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .cards__cont .card__back__side .flip__btn .flip__icon {
+  border-radius: 50%;
+  border: 16px solid transparent;
+}
+main .flip {
+  transform: rotateY(180deg);
+}
+
+.btn__cont {
+  width: 100%;
+  margin: 25px;
+  text-align: center;
+}
+.btn__cont button {
+  width: 189px;
+  height: 52px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+}
+.btn__cont button:disabled, .btn__cont button:active {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(28, 26, 26, 0.1490196078);
 }

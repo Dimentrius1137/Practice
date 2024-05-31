@@ -24,10 +24,7 @@ tabs_container.forEach((el) => {
     })
 })
 
-
 const enterButton = document.querySelector('button');
-
-
 
 function IsElementsChecked(){
     const unchecked_elements = document.querySelectorAll('.no__checked')
