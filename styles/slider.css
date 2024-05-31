@@ -142,7 +142,7 @@ main .swiper .buttons .swiper-button-next::after {
 
 .btn__cont {
   width: 100%;
-  margin: 25px;
+  margin: 25px 0px 25px 0;
   text-align: center;
 }
 .btn__cont button {

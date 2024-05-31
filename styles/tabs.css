@@ -152,7 +152,7 @@ main .main__container .tab__content:first-child {
 
 .btn__cont {
   width: 100%;
-  margin: 40px;
+  margin: 25px 0px 25px 0;
   text-align: center;
 }
 .btn__cont button {

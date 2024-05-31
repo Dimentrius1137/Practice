@@ -59,7 +59,7 @@ footer .footer__line2 {
 
 body {
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,7 +144,7 @@ main .acc__cont .acc__tab__border {
 
 .btn__cont {
   width: 100%;
-  margin: 25px;
+  margin: 25px 0px 25px 0;
   text-align: center;
 }
 .btn__cont button {

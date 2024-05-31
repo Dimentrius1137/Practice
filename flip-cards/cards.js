@@ -15,7 +15,7 @@ cards.addEventListener('click', (el) => {
         card.children[0].style.display = "flex";
         card.children[1].style.display = "none"
        }
-       }, 500);
+       }, 300);
 
     }
     IsElementsChecked()
