@@ -25,7 +25,10 @@ accords.forEach(accord => {
                 arrow.classList.toggle('rotate');
                 tab.classList.toggle('acc__tab__border');
             }
-
+            else{
+                CloseTabs(accords_container);
+            }
+         
         }
         IsElementsChecked()
        
