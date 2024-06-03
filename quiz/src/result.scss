@@ -72,12 +72,12 @@ body{
                 max-width: 100%;
                 @include flex__params(center, center, column);
                 padding: 30px;
-                display: none;
+                // display: none;
                 .try__count{
                     font-size: 14px;
                     color:#373C40;
                 }
-                .best__result__per{
+                .best__result__per {
                     span{
                         font-weight: 700;
                         font-size: 30px;

@@ -32,10 +32,9 @@
                 </div>
             </div>
     
-            <div class="best__result js_best__res">
-                <p clas="try_count">Результаты 1-й  попытки</p>
-                <div class="best__result__per">
-                    <span class="last__grade">9</span>
+            <div class="best__result">
+                <p clas="try_count">Лучший результат</p>
+                <div class="best__result__per js_best__res">
                 </div>
             </div>
         </div>
@@ -55,7 +54,8 @@
         const date = document.querySelector('.js_user');
         date.innerHTML = `Константин Константинопольский <span class="date">${new Date(Date.now()).toLocaleDateString()}</span>`
 
-        const result_count = 2; 
+        const result_count = 9; 
+        let results = [1, result_count, 2];
         const best_res = document.querySelector('js_best__res');
 
         const comment = document.querySelector('.js_res__comment');
@@ -71,6 +71,8 @@
         if(result_count >= 8){
             res_percent.children[0].style.color = "#73BE43";
         }
+        const best__result = document.querySelector('.best__result__per');
+        best__result.innerHTML = `<span>${Math.max(...results)*10}%</span>`;
       </script>
 </body>
 </html>
