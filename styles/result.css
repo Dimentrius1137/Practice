@@ -1,0 +1,164 @@
+header {
+  width: 100%;
+  height: 65px;
+  position: relative;
+}
+header .header__menu {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+header img {
+  margin: 15px 30px;
+}
+header span {
+  width: 100%;
+}
+header .line1 {
+  width: 100%;
+  height: 1px;
+  background-color: #73BE43;
+}
+header .line2 {
+  width: 50%;
+  height: 1px;
+  background-color: red;
+}
+header .line3 {
+  background-color: red;
+  width: 386px;
+  height: 5px;
+}
+
+footer {
+  width: 100%;
+  height: 5px;
+  display: flex;
+  flex-direction: row;
+}
+footer .footer__line1 {
+  width: 50%;
+  height: 5px;
+  background-color: red;
+}
+footer .footer__line2 {
+  width: 50%;
+  height: 5px;
+  background-color: #73BE43;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.outer__cont {
+  width: 1000px;
+  height: auto;
+}
+.outer__cont h1 {
+  font-size: 38px;
+  margin: 75px 0px 0px 30px;
+}
+.outer__cont main {
+  height: auto;
+  min-height: 512px;
+}
+.outer__cont main .user, .outer__cont main .result__comment, .outer__cont main .btn__cont {
+  margin-left: 30px;
+}
+.outer__cont main .user {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 30px;
+  color: #69696C;
+}
+.outer__cont main .user .date {
+  margin-left: 20px;
+}
+.outer__cont main .result__cont {
+  width: 940px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.outer__cont main .result__cont .result__now {
+  width: auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  height: 125px;
+}
+.outer__cont main .result__cont .result__now .try__count {
+  font-size: 14px;
+  color: #373C40;
+}
+.outer__cont main .result__cont .result__now .result__per span {
+  font-weight: 700;
+  font-size: 30px;
+  color: #69696C;
+  margin-left: 20px;
+  color: red;
+}
+.outer__cont main .result__cont .best__result {
+  width: auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  display: none;
+}
+.outer__cont main .result__cont .best__result .try__count {
+  font-size: 14px;
+  color: #373C40;
+}
+.outer__cont main .result__cont .best__result .best__result__per span {
+  font-weight: 700;
+  font-size: 30px;
+  color: #69696C;
+  margin-left: 20px;
+}
+.outer__cont main .result__comment {
+  font-size: 18px;
+  font-weight: 400;
+}
+.outer__cont main .btn__cont {
+  margin-top: 30px;
+}
+.outer__cont main .btn__cont .restart__btn {
+  width: 189px;
+  height: 52px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.outer__cont main .btn__cont .restart__btn .restart__img {
+  margin-left: 10px;
+}
+.outer__cont main .btn__cont button:active {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(28, 26, 26, 0.1490196078);
+}

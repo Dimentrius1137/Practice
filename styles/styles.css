@@ -1,3 +1,53 @@
+header {
+  width: 100%;
+  height: 65px;
+  position: relative;
+}
+header .header__menu {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+header img {
+  margin: 15px 30px;
+}
+header span {
+  width: 100%;
+}
+header .line1 {
+  width: 100%;
+  height: 1px;
+  background-color: #73BE43;
+}
+header .line2 {
+  width: 50%;
+  height: 1px;
+  background-color: red;
+}
+header .line3 {
+  background-color: red;
+  width: 386px;
+  height: 5px;
+}
+
+footer {
+  width: 100%;
+  height: 5px;
+  display: flex;
+  flex-direction: row;
+}
+footer .footer__line1 {
+  width: 50%;
+  height: 5px;
+  background-color: red;
+}
+footer .footer__line2 {
+  width: 50%;
+  height: 5px;
+  background-color: #73BE43;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,9 +56,84 @@
   font-size: 14px;
 }
 
-#app {
+body {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
+}
+
+.outer__cont {
+  width: 1000px;
+  height: auto;
+}
+.outer__cont h1 {
+  margin: 75px 0px 0px 30px;
+  font-size: 38px;
+}
+.outer__cont main {
+  height: auto;
+  min-height: 468px;
+}
+.outer__cont main .start__page {
+  height: auto;
+}
+.outer__cont main .start__page .desc {
+  margin: 30px 0px 0px 30px;
+  font-size: 18px;
+}
+.outer__cont main .start__page .points__cont {
+  width: 940px;
+  height: 86px;
+  padding: 15px;
+  margin: 40px;
+  border-radius: 10px;
+  background-color: #FFEFE0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.outer__cont main .start__page .points__cont .points__list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+  list-style: none;
+}
+.outer__cont main .start__page .points__cont .points__list .point span {
+  margin: 0 10px 10px 0;
+  color: red;
+  font-weight: 600;
+}
+.outer__cont main .start__page .start__btn__cont {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.outer__cont main .start__page .start__btn__cont .start {
+  width: 940px;
+  height: 61px;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.outer__cont main .start__page .start__btn__cont .start img {
+  margin-left: 20px;
+}
+.outer__cont main #app {
+  display: none;
 }

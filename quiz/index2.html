@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/result.css">
+</head>
+<body>
+    <div class="outer__cont">
+        <header>
+          <div class="header__menu">
+              <img src="../items/1.png" alt="">
+              <span>Текст</span>
+          </div>
+          <div class="line1">
+              <div class="line2">
+                  <div class="line3"></div>
+              </div>
+          </div>
+      </header>
+      <h1>
+        Результаты тестирования
+      </h1>
+      <main>
+        <p class="user js_user"></p>
+        <div class="result__cont">
+            <div class="result__now">
+                <p clas="try__count">Результаты 1-й  попытки</p>
+                <div class="result__per js_result__per">
+                    <span></span>
+                </div>
+            </div>
+    
+            <div class="best__result js_best__res">
+                <p clas="try_count">Результаты 1-й  попытки</p>
+                <div class="best__result__per">
+                    <span class="last__grade">9</span>
+                </div>
+            </div>
+        </div>
+       
+        <p class="result__comment js_res__comment"></p>
+        <div class="btn__cont">
+            <button class="restart__btn">Повторить тест<img src="public/items/Union2.png" class="restart__img"></button>
+        </div>
+      </main>
+     
+        <footer>
+          <div class="footer__line1"></div>
+          <div class="footer__line2"></div>
+      </footer>
+      </div>
+      <script>
+        const date = document.querySelector('.js_user');
+        date.innerHTML = `Константин Константинопольский <span class="date">${new Date(Date.now()).toLocaleDateString()}</span>`
+
+        const result_count = 2; 
+        const best_res = document.querySelector('js_best__res');
+
+
+        const comment = document.querySelector('.js_res__comment');
+        if(result_count >= 8){
+            comment.innerHTML = "Тест успешно выполнен"
+        }
+        else{
+            comment.innerHTML = "Не очень хороший результат, рекомендуем изучить курс еще раз.";
+        }
+        
+        const res_percent = document.querySelector('.js_result__per');
+        res_percent.children[0].innerText = `${result_count}/10 ${result_count * 10}%`
+        if(result_count >= 8){
+            res_percent.children[0].style.color = "#73BE43";
+        }
+
+      </script>
+</body>
+</html>

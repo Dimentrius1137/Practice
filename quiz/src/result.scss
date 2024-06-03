@@ -1,0 +1,117 @@
+@import "../../scss_patterns/header";
+@import "../../scss_patterns/footer";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}  
+
+@mixin flex__params($horiz, $vert, $dir){
+    display: flex;
+    flex-direction: $dir;
+    align-items: $horiz;
+    justify-content: $vert;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    @include flex__params(center, start, column);
+}
+.outer__cont{
+    width: 1000px;
+    height: auto;
+    h1{
+        font-size: 38px; 
+        margin: 75px 0px 0px 30px;
+      }
+    main{
+        height: auto;
+        min-height: 512px;
+        .user, .result__comment, .btn__cont{
+            margin-left: 30px;
+        }
+        .user{
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 30px;
+            color:#69696C;
+            .date{
+                margin-left: 20px;
+            }
+        }
+        .result__cont{
+            width: 940px;
+            @include flex__params(center, space-around, row);
+            .result__now{
+                width: auto;
+                max-width: 100%;
+                @include flex__params(center, center, column);
+                padding: 30px;
+                height: 125px;
+                .try__count{
+                    font-size: 14px;
+                    color:#373C40;
+                }
+                .result__per{
+                    span{
+                        font-weight: 700;
+                        font-size: 30px;
+                        color:#69696C;
+                        margin-left: 20px;
+                        color:red;
+                    }
+
+                }
+    
+            }
+            .best__result{
+                width: auto;
+                max-width: 100%;
+                @include flex__params(center, center, column);
+                padding: 30px;
+                display: none;
+                .try__count{
+                    font-size: 14px;
+                    color:#373C40;
+                }
+                .best__result__per{
+                    span{
+                        font-weight: 700;
+                        font-size: 30px;
+                        color:#69696C;
+                        margin-left: 20px;
+                    }
+
+                }
+            }
+        }
+
+        .result__comment{
+            font-size: 18px;
+            font-weight: 400;
+
+        }
+        .btn__cont{
+            margin-top: 30px;
+            .restart__btn{
+                width: 189px;
+                height: 52px;
+                border-radius: 8px;
+                border: 1px solid #00000033;
+                background-color: #FFFFFF;
+                @include flex__params(center, center, row);
+                .restart__img{
+                    margin-left: 10px;
+                }
+            }
+            button:active{
+                border: 1px solid #00000033;
+                background-color: #1C1A1A26;
+            }
+        }
+    }
+   
+}
