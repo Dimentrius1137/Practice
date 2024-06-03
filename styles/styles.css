@@ -67,6 +67,7 @@ body {
 
 .outer__cont {
   width: 1000px;
+  min-height: 700px;
   height: auto;
 }
 .outer__cont h1 {
@@ -136,4 +137,6 @@ body {
 }
 .outer__cont main #app {
   display: none;
+
 }
+

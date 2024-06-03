@@ -152,7 +152,7 @@ main .cards__cont .card__back__side {
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   display: none;
 }
@@ -171,7 +171,6 @@ main .cards__cont .card__back__side .flip__btn {
   width: 52px;
   height: 52px;
   margin-top: auto;
-  margin-bottom: 10px;
   border-radius: 50%;
   background-color: red;
   display: flex;
@@ -202,4 +201,4 @@ main .flip {
 .btn__cont button:disabled, .btn__cont button:active {
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(28, 26, 26, 0.1490196078);
-}
+}/*# sourceMappingURL=cards.css.map */
